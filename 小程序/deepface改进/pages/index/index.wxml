@@ -1,0 +1,80 @@
+<!-- index.wxml -->
+<!-- deepface -->
+<view>
+  <!-- 摄像机 -->
+  <view class="camera">
+    <camera device-position="front" flash="off" binderror="error" style="width: 100%; height: 100%;"></camera>
+  </view>
+ 
+  <view class='view-btn'>
+    <button formType="submit" type='primary' size="mini" bindtap='start'>确定</button>
+    <button formType="reset" type='primary' size="mini" bindtap='stop'>重置</button>
+  </view>
+
+  <!-- 表情值输出 -->
+  <view class="output">
+    <!-- 中立 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >中立</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{neutral}}"  active='true' active-mode='forwards' color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 高兴 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >高兴</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{happy}}" active='true' active-mode='forwards' color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 厌恶 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >厌恶</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{disgust}}" active='true' active-mode='forwards' color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 害怕 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >害怕</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{fear}}" active='true' active-mode='forwards' color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 伤心 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >伤心</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{sad}}" active='true' active-mode='forwards' color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 惊喜 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >惊喜</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{surprise}}" active='true' active-mode='forwards' color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+    <!-- 生气 -->
+    <view class="view-face">
+      <view class="view-text">
+        <text >生气</text>
+      </view>
+      <view class="view-progress">
+        <progress percent="{{angry}}" active='true' active-mode='forwards' color="#10AEFF" show-info stroke-width="3"/>
+      </view> 
+    </view>
+  </view>
+</view>
